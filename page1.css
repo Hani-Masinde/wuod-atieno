@@ -1,0 +1,238 @@
+*{
+    margin:0;
+    box-sizing:border-box;
+    padding:0;
+    text-decoration:none;
+    color:white;
+}
+
+body{
+    background-color:#000000c5;
+}
+
+header{
+    top:0;
+    left:0;
+    width:100%;
+    height:12vh;
+    background:rgba(8, 241, 8, 0.867);
+    background-color:#00000018;
+    z-index:100;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-radius:7px;
+    margin-bottom:20px;
+}
+header .logo{
+    color:orangered;
+    font-size:1.5em;
+    font-weight:650;
+}
+
+header .logo b{
+    color:navy;
+}
+header .top{
+    display:flex;
+    margin-right:8%;
+    justify-content:center;
+
+}
+
+header .top .link,.linki{
+    display:flex;
+    margin-left:30px;
+    color:white;
+    font-size:18px;
+    font-weight:600;
+    transition:.6s;
+}
+
+header .top .linki{
+    color:#c6ee16;
+}
+header .top .link:hover{
+    color:blue;
+    text-decoration:underline #ffffff 2px;
+    transition:.2s;
+
+}
+
+header .top .link:active{
+    color:#c6ee16;
+    text-decoration:none;
+
+}
+
+section .home{
+    font-family:sans-serif;
+    margin:10px;
+}
+
+section .home h1{
+    font-weight:600;
+    margin-left:20px;
+    margin-bottom:5px;
+}
+
+section .home b span{
+    margin-left:10px;
+    font-size:1.5em;
+    color:chartreuse;
+    animation:tit 5s ease-in  infinite;
+}
+
+@keyframes tit{
+    0%{
+        color:chartreuse;
+    }
+    20%{
+        color:blue;
+
+    }
+    40%{
+        color:violet;
+    }
+    60%{
+        color:tomato;
+    }
+    80%{
+        color:gold;
+    }
+    100%{
+        color:aqua;
+    }
+}
+
+section .home p{
+    font-size:17px;
+    
+}
+
+section .social-links{
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+}
+
+section .social-links a{
+    display:flex;
+    justify-content:space-between;
+    margin-left:15px;
+    color:chartreuse;
+    transition:.6s;
+}
+
+section .social-links a:hover{
+    text-shadow:0px 0px 10px chartreuse;
+    text-decoration:underline chartreuse 2px;
+    transition:.2s;
+}
+
+section .social-links a:active{
+    color:white;
+    text-decoration:none;
+}
+
+section .btn{
+    display:flex;
+    justify-content:center;
+}
+
+section .btn button{
+    background:chartreuse;
+    border:transparent;
+    height:5vh;
+    width:11%;
+    padding:5px;
+    border-radius:10px;
+    margin-top:10px;
+    margin-bottom:10px;
+    display:flex;
+    text-align:left;
+    justify-content:center;
+    align-items:center;
+    font-size:13px;
+    transition:.5s;
+}
+
+section .btn button:hover{
+    box-shadow:0px 0px 10px chartreuse;
+    cursor:pointer;
+    color:#000;
+    transition:.4s;
+}
+
+section .btn button:active{
+    background:transparent;
+    color:#fff;
+}
+
+.copy,.tm,.reserve{
+    display:flex;
+    justify-content:center;
+    margin-top:10px;
+}
+
+section .home .image-container{
+    width:370px;
+    height:370px;
+    background:yellow;
+    margin-left:40%; 
+    border-radius:50%; 
+    position:relative; 
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+section .home .image-container .image-box{
+     width:370px;
+    height:370px;
+    background:yellowgreen; 
+    position:relative;
+    border-radius:50%; 
+     display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:1;
+}
+ 
+section .home .image-container .image-box .image-item{
+     width:370px;
+    height:370px;
+    background:purple; 
+     display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%; 
+    position:realtive;
+    animation:cont 1s linear  infinite;
+}
+
+
+@keyframes cont{
+    0%,100%{
+        transform:rotate(360deg);
+        background:radial-gradient(blue,green,yellow,
+        purple,lightblue,pink,red);
+    }
+    100%{
+        transform:rotate(360deg);
+        background:radial-gradient(rgb(22, 221, 148),rgb(128, 0, 0),rgb(233, 22, 223),
+       hotpink,rgb(237, 5, 5));
+    }
+
+}
+
+
+section .home .image-container .image-box .image-item img{
+    height:364px;
+    width:364px;
+    border-radius:50%; 
+     display:flex;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+}
