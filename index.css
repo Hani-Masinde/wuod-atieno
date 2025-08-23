@@ -1,0 +1,164 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    text-decoration:none;
+    color:black;
+}
+body{
+    height:100vh;
+    /*background-color:beige;*/
+    background-image:url("pexels-rpnickson-2775196.jpg");
+    background-position:center;
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    background-size:cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.container2{
+    height:500px;
+    width:500px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:blueviolet;
+    position:relative;
+    animation:bc 10s linear infinite;
+}
+
+@property --deg{
+    syntax:"<angle>";
+    inherits:true;
+    initial-value:0deg;
+}
+.container2::before,.container2::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    padding:3px;
+    background:conic-gradient(from var(--deg),blue,transparent,rgb(10, 239, 21) ,transparent );
+    z-index:-1;
+}
+.container2::after{
+    filter:blur(5px);
+}
+@keyframes bc{
+    to{
+        --deg:360deg;
+    }
+}
+.container2 h2{
+    font-size:2rem;
+    color:transparent;
+    background:linear-gradient(to left,red,blue);
+    background-size:cover;
+    background-clip:text;
+    animation:text 10s linear infinite;
+}
+@keyframes text{
+    from{
+        background-position-x:-290px;
+    }
+}
+ .link2{
+    color:yellow;
+    font-size:20px;
+    margin-left:10px;
+ }
+.container{
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background-color:aquamarine;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    animation:back 1800ms linear infinite;
+}
+
+@property --angle{
+    syntax:"<angle>";
+    inherits:true;
+    initial-value:0deg;
+}
+.container::before,.container::after{
+    content:"";
+    position:absolute;
+    height:100%;
+    width:100%;
+    border-radius:inherit;
+    z-index:-1;
+    padding:2px;
+    background:conic-gradient(from var(--angle) at center,blue,red);
+}
+.container::after{
+    filter:blur(5px);
+}
+@keyframes back{
+    to{
+        --angle:360deg;
+    }
+}
+.container form h2{
+    text-align:center;
+    font-size:2rem;
+    font-weight:600;
+    color:orangered;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.container .inp{
+    margin-left:10px;
+}
+.container .inp input,.container2 .inp input{
+    width:350px;
+    height:40px;
+    margin-top:8px;
+    border-radius:10px;
+    outline-style:none;
+    background:transparent;
+    border:1px solid grey;
+    padding:20px;
+}
+::placeholder{
+    color:rgb(161, 18, 18);
+    padding:7px;
+    font-size:1rem;
+}
+.login{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:8px;
+    margin-bottom:8px;
+}.login a{
+    width:250px;
+    height:40px;
+    border-radius:20px;
+}
+.btn{
+    width:250px;
+    height:40px;
+    border-radius:20px;
+    font-size:20px;
+    font-weight:600;
+    background:transparent;
+    cursor:pointer;
+}
+.con input{
+margin-right:2px;
+margin-bottom:8px;
+}
+.con .link{
+    margin-left:75px;
+    color:blue;
+    font-size:1rem;
+}
+p .link{
+    color:blue;
+    margin-left: 10px;
+}

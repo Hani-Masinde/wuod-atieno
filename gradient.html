@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animate text</title>
+<style>
+    body{
+        background:lightslategray;
+    }
+    h2{
+        font-size:3rem;
+        background:linear-gradient(to left,red,blue) center;
+        background-size:cover;
+        background-clip:text;
+        color:transparent;
+        animation:animate 5s linear infinite;
+    }
+    @keyframes animate{
+        to{
+            background-position-x:-500px;
+        }
+    }
+</style>
+</head>
+<body>
+    <h2>Haningtone</h2>
+</body>
+</html>
