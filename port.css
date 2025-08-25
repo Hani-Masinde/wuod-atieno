@@ -27,12 +27,24 @@ header ul{
 header ul li a{
     text-decoration:none;
     color:rgb(4, 27, 4);
+    position:relative;
+    padding:1px 5px;
     transition:.7s;
 }
-header ul li a:hover{
-    color:yellow;
-    text-decoration:underline;
+header ul li a::after{
+    content:"";
+    position:absolute;
+    height:3px;
+    width:0;
+    background:conic-gradient(from 0deg at  center,violet,red,green);
+    left:0;
+    bottom:-2px;
     transition:.5s;
+}
+header ul li a:hover,header ul li a:hover:after{
+    color:yellow;
+    transition:.5s;
+    width:100%;
 }
 header ul li a:active{
     color:orange;
@@ -71,7 +83,6 @@ a {
 .cv:hover{
     box-shadow:0px 0px 15px chartreuse;
     border:1px;
-    transition:.3s;
 }
 .cv:active{
     background-color:transparent;
@@ -91,13 +102,16 @@ a {
     display:flex;
     justify-content:center;
     align-items:center;
+    transform:skewY(-25deg) rotate(-30deg);
     transition:.5s;
+
 }
 
 .social-links a:hover{
-    box-shadow:0px 0px 12px yellow;
+    box-shadow:0px 0px 12px rgb(255, 255, 25);
     scale:1.2;
     transition:.4s;
+    color:white;
 }
 .social-links a:active{
     background-color:chartreuse;
@@ -114,6 +128,31 @@ a {
     margin-top:10px;
     position:relative;
     margin-bottom:20px;
+    margin-right:10px;
+}
+@property --angle{
+    syntax:"<angle>";
+    inherits:true;
+    initial-value:0deg;
+}
+.image-container::after,.image-container::before{
+    content:"";
+    position:absolute;
+    height:100%;
+    width:100%;
+    border-radius:inherit;
+    background:conic-gradient(from var(--angle)at  center,blue,red,black);
+    z-index:-1;
+    padding:3px;
+    animation: round 3s linear infinite;
+}
+.image-container::before{
+    filter:blur(6px);
+}
+@keyframes round{
+    to{
+        --angle:360deg;
+    }
 }
     
 img{
@@ -121,7 +160,7 @@ img{
     width:100%;
     height:100%;
     border-radius:inherit;
-    padding:5px;
+    padding:0px;
 }
 footer{
     margin-top:20px;

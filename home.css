@@ -20,12 +20,18 @@ body{
 .logo{
     align-self: center;
     font-size:2rem;
+    background:linear-gradient(to left,rgb(0, 247, 0),yellow);
+    background-size:cover;
+    background-clip:text;
+    color:transparent;
+    animation: backgr 5s linear infinite;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 @keyframes backgr{
-    to{
+    0%{
         background-position-x:-150px;
     }
+
 }
 
 ul{
@@ -40,24 +46,61 @@ ul li a{
     font-size:1.2rem;
     font-weight:600;
     transition:.5s;
+    padding:5px;
+    position:relative;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 }
 ul li a:hover{
-    color:aquamarine;
-    text-decoration:underline;
+    color:aqua;
+    transition:.5s;
 }
+ul li a::after{
+    content:"";
+    position:absolute;
+    height:3px;
+    width:0;
+    background:linear-gradient(to left,white,blue,yellow,white);
+    left:0;
+    bottom:-2px;
+    transition:.4s;
 
+}
+ul li a:hover:after{
+    width:100%;
+}
+ul li a:active{
+    color:black;
+}
 .an{
     height:75vh;
     width:100%;
     display:flex;
-    justify-content:center;
+    justify-content:left;
     align-items:center;
 }
 .an h2{
     font-size:3rem;
+    background:linear-gradient(to left,lightgreen,red,black);
+    background-size:cover;
+    background-clip:text;
+    color:transparent;
+    /*animation:rot 5s linear infinite;*/
+    animation:move 10s linear infinite;
     font-family:'Times New Roman', Times, serif;
+}
+
+@keyframes move{
+    25%{
+        transform:rotate(-360deg);
+        
+    }
+    50%{
+        transform:translateX(100%);
+    }
+    100%{
+        background-position-x:-400px;
+    }
 }
 .end{
     background-color:rgb(114, 114, 113);
