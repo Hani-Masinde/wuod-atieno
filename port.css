@@ -46,20 +46,21 @@ header ul li a:hover,header ul li a:hover:after{
     transition:.5s;
     width:100%;
 }
-header ul li a:active{
+header ul li a:active,.live:hover,.live{
     color:orange;
 }
 .overal-container{
     display:flex;
 }
 .info{
-    margin-left:1.5%;
+    padding: 0% 1.5%;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .info h2{
     font-size:1.5rem;
     font-style:oblique;
     font-weight:600;
+    text-align:center;
 }
 ol{
     margin-left:10%;
@@ -124,11 +125,10 @@ a {
     justify-content:center;
     align-items:center;
     border-radius:50%;
-    background-color:aquamarine;
     margin-top:10px;
     position:relative;
     margin-bottom:20px;
-    margin-right:10px;
+    margin-right:2%;
 }
 @property --angle{
     syntax:"<angle>";
