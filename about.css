@@ -14,7 +14,7 @@ body{
 
 }
 header{
-    width:100%;
+    width:100vw;
     height:100px;
     border-radius:20px;
     display:flex;
@@ -96,4 +96,22 @@ header ul li a:hover:after,header ul li a:hover{
 img{
     width:495px;
     height:495px;
+}
+@media (max-width:767px) {
+    body{
+        background:rgba(242, 163, 242, 0.979);
+        height:100vh;
+        width:100vw;
+    }
+    header{
+        background:rgb(242, 144, 242);
+        width:100vw;
+        height:60px;
+        border-radius:10px;
+        padding-right:6%;
+    }
+    header ul{
+        gap:10px;
+        font-size:1.1rem;
+    }
 }

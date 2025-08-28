@@ -111,7 +111,7 @@ ul li a:active,.linky:hover,.linky{
     align-items:center;
     font-size:1.3rem;
     font-weight:600;
-}/*
+}
 @media (max-width:767px){
     body{
         background:linear-gradient(to left,slategray,skyblue);
@@ -132,6 +132,9 @@ ul li a:active,.linky:hover,.linky{
     ul li a:hover{
         color:chartreuse;
     }
+    .an{
+        height:84vh;
+    }
     .an h2 {
         font-size:1.8rem;
     }
@@ -145,4 +148,4 @@ ul li a:active,.linky:hover,.linky{
     .end p{
         font-size:.8rem;
     }
-}*/
+}
