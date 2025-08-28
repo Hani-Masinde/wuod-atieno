@@ -176,6 +176,7 @@ img{
    p{
     padding:2%;
    }
+
    footer p{
     padding:1px;
    }
@@ -183,7 +184,8 @@ img{
     background:linear-gradient(to left ,yellow,lightgreen);
    }
    .images{
-    width:60vw;
+    width:80vw;
+    object-fit:cover;
 
    }
 }
