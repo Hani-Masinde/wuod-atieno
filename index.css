@@ -163,4 +163,61 @@ margin-bottom:8px;
 p .link{
     color:blue;
     margin-left: 10px;
+}@media (max-width:767px){
+    .container{
+        width:350px;
+        height:350px;
+    }
+    .container form h2{
+        font-size:1rem;
+        margin:20px;
+    }
+    .container .inp{
+        margin-left:5px;
+    }
+    .container .inp input,.container2 .inp input{
+        width:95%;
+        height:20px;;
+        display:flex;
+        margin-left:5%;
+        margin-top:4px;
+    }
+    .login a{
+        width:120px;
+        height:10px;
+    }
+    .btn{
+        width:120px;
+        height:30px;
+        border-radius:10px;
+        border:1px solid grey;
+        font-size:15px;
+    }
+    .con input{
+        margin-left:30px;
+        margin-top:15px;
+    }
+    .con .link{
+        margin-left:5px;
+    }
+    p {
+        margin-left:25px;
+    }
+    .container2{
+        width:280px;
+        height:400px;
+    }
+    .container2 h2{
+        font-size:1.2rem;
+        margin-bottom:20px;
+    }
+    .link2{
+        font-size:16px;
+    }
+    .container2 form p{
+        margin-top:25px;
+    }
+    ::placeholder{
+        font-size:.9rem;
+    }
 }
